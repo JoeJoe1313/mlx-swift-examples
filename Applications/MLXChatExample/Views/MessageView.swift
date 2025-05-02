@@ -6,6 +6,7 @@
 //
 
 import AVKit
+import MarkdownUI
 import SwiftUI
 
 /// A view that displays a single message in the chat interface.
@@ -59,8 +60,12 @@ struct MessageView: View {
         case .assistant:
             // Assistant messages are left-aligned without background
             HStack {
-                Text(message.content)
-                    .textSelection(.enabled)
+                Markdown(
+                    """
+                    \(message.content)
+                    """
+                )
+                .textSelection(.enabled)
 
                 Spacer()
             }
