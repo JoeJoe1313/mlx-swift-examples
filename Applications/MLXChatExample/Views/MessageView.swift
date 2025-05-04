@@ -60,11 +60,7 @@ struct MessageView: View {
         case .assistant:
             // Assistant messages are left-aligned without background
             HStack {
-                Markdown(
-                    """
-                    \(message.content)
-                    """
-                )
+                Markdown(message.content)
                 .textSelection(.enabled)
 
                 Spacer()
