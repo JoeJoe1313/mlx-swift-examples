@@ -172,6 +172,11 @@ public class VLMRegistry: AbstractModelRegistry, @unchecked Sendable {
             "What is the main action or notable event happening in this segment? Describe it in one brief sentence."
     )
 
+    static public let nanonets_ocr_s = ModelConfiguration(
+        id: "mlx-community/Nanonets-OCR-s-bf16",
+        defaultPrompt: "Extract the text from the image."
+    )
+
     static public func all() -> [ModelConfiguration] {
         [
             paligemma3bMix448_8bit,
@@ -182,6 +187,7 @@ public class VLMRegistry: AbstractModelRegistry, @unchecked Sendable {
             gemma3_12B_qat_4bit,
             gemma3_27B_qat_4bit,
             smolvlm,
+            nanonets_ocr_s,
         ]
     }
 
